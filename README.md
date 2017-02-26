@@ -8,7 +8,7 @@ By:
 - Tania Hurtado
 - Wilman Guarín
 
-This project is the Presentation Layer of Muro Application, this was development with ReactJS and Reactstrap.
+This project is the Presentation Layer of Muro Application, this is being developed with ReactJS and Reactstrap.
 
 ## Run App
 
