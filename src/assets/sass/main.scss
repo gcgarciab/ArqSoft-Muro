@@ -1,0 +1,68 @@
+@import "variables";
+@import "fonts";
+@import "mixin";
+
+body{
+	margin: 0;
+}
+
+.wrapper{
+	background-color: $lightGray;
+	color: $grayUN;
+	position: relative;
+	.wrapper-header{
+		background-color: $grayUN;
+		color: $white;
+		font-family: $font-LatoB;
+		position: relative;
+		.title{
+			display: inline-block;
+			font-size: 30px;
+			margin-top: 30px;
+			padding-bottom: 5px;
+		}
+		.login{
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 500px;
+			.loginForm{
+				.loginInput{
+					width: 35%;
+					float: left;
+					margin-bottom: 0;
+					margin-right: 10px;
+					font-size: 12px;
+					font-family: $font-LatoT;
+					letter-spacing: 0.5px;
+					padding: 10px 0;
+					label{
+						margin-bottom: 5px;
+					}
+					input{
+						padding: 5px;
+						font-size: 12px;
+						font-family: $font-LatoT;
+						border-radius: 2px;
+					}
+				}
+				.loginSubmit{
+					padding: 5px;
+					font-size: 12px;
+					font-family: $font-LatoB;
+					border-radius: 3px;
+					position: absolute;
+					bottom: 17px;
+					border-radius: 2px;
+					color: $white;
+					background-color: $grayUN;
+					border: 1px solid $white;
+				}
+			}
+		}
+	}
+	.wrapper-body{
+		padding: 25px 0;
+	}
+}

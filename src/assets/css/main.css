@@ -1,0 +1,25 @@
+/* Colors */
+/* Fonts */
+/* Fonts sizes */
+@font-face { font-family: 'Lato-Bold'; src: url("../fonts/Lato-Bold.eot"); src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype"), url("../fonts/Lato-Bold.svg#LatoB") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Lato-Hairline'; src: url("../fonts/Lato-Hairline.eot"); src: url("../fonts/Lato-Hairline.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Hairline.woff2") format("woff2"), url("../fonts/Lato-Hairline.woff") format("woff"), url("../fonts/Lato-Hairline.ttf") format("truetype"), url("../fonts/Lato-Hairline.svg#LatoH") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Lato-Semibold'; src: url("../fonts/Lato-Semibold.eot"); src: url("../fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Semibold.woff2") format("woff2"), url("../fonts/Lato-Semibold.woff") format("woff"), url("../fonts/Lato-Semibold.ttf") format("truetype"), url("../fonts/Lato-Semibold.svg#LatoS") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Lato-Thin'; src: url("../fonts/Lato-Thin.eot"); src: url("../fonts/Lato-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Thin.woff2") format("woff2"), url("../fonts/Lato-Thin.woff") format("woff"), url("../fonts/Lato-Thin.ttf") format("truetype"), url("../fonts/Lato-Thin.svg#LatoT") format("svg"); font-weight: normal; font-style: normal; }
+/* Animations */
+@-webkit-keyframes bounce { 0%, 20%, 50%, 80%, 100% { -webkit-transform: translateY(0); transform: translateY(0); }
+  40% { -webkit-transform: translateY(-5px); transform: translateY(-5px); }
+  60% { -webkit-transform: translateY(-5px); transform: translateY(-5px); } }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% { -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
+  40% { -ms-transform: translateY(-5px); -webkit-transform: translateY(-5px); transform: translateY(-5px); }
+  60% { -ms-transform: translateY(-5px); -webkit-transform: translateY(-5px); transform: translateY(-5px); } }
+body { margin: 0; }
+
+.wrapper { background-color: #f0f0f0; color: #666; position: relative; }
+.wrapper .wrapper-header { background-color: #666; color: #fff; font-family: "Lato-Bold", sans-serif; position: relative; }
+.wrapper .wrapper-header .title { display: inline-block; font-size: 30px; margin-top: 30px; padding-bottom: 5px; }
+.wrapper .wrapper-header .login { height: 100%; position: absolute; right: 0; top: 0; width: 500px; }
+.wrapper .wrapper-header .login .loginForm .loginInput { width: 35%; float: left; margin-bottom: 0; margin-right: 10px; font-size: 12px; font-family: "Lato-Thin", sans-serif; letter-spacing: 0.5px; padding: 10px 0; }
+.wrapper .wrapper-header .login .loginForm .loginInput label { margin-bottom: 5px; }
+.wrapper .wrapper-header .login .loginForm .loginInput input { padding: 5px; font-size: 12px; font-family: "Lato-Thin", sans-serif; border-radius: 2px; }
+.wrapper .wrapper-header .login .loginForm .loginSubmit { padding: 5px; font-size: 12px; font-family: "Lato-Bold", sans-serif; border-radius: 3px; position: absolute; bottom: 17px; border-radius: 2px; color: #fff; background-color: #666; border: 1px solid #fff; }
+.wrapper .wrapper-body { padding: 25px 0; }

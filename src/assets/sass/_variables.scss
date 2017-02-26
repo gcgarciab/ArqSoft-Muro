@@ -1,0 +1,16 @@
+/* Colors */
+$white: #fff;
+$black: #000;
+$greenUN: #94B43B;
+$grayUN: #666;
+$lightGray: #f0f0f0;
+
+/* Fonts */
+$font-LatoB: 'Lato-Bold', sans-serif;
+$font-LatoH: 'Lato-Hairline', sans-serif;
+$font-LatoS: 'Lato-Semibold', sans-serif;
+$font-LatoT: 'Lato-Thin', sans-serif;
+
+/* Fonts sizes */
+$font-size-base: 16px;
+$font-size-small: ceil(($font-size-base * 0.85)); // ~12px
