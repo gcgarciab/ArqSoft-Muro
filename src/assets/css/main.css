@@ -1,6 +1,7 @@
 /* Colors */
 /* Fonts */
 /* Fonts sizes */
+@font-face { font-family: 'Notification'; src: url("../fonts/notification.eot?s3g3t9"); src: url("../fonts/notification.eot?#iefixs3g3t9") format("embedded-opentype"), url("../fonts/notification.woff?s3g3t9") format("woff"), url("../fonts/notification.ttf?s3g3t9") format("truetype"), url("../fonts/notification.svg?s3g3t9#notification") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'Lato-Bold'; src: url("../fonts/Lato-Bold.eot"); src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype"), url("../fonts/Lato-Bold.svg#LatoB") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'Lato-Hairline'; src: url("../fonts/Lato-Hairline.eot"); src: url("../fonts/Lato-Hairline.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Hairline.woff2") format("woff2"), url("../fonts/Lato-Hairline.woff") format("woff"), url("../fonts/Lato-Hairline.ttf") format("truetype"), url("../fonts/Lato-Hairline.svg#LatoH") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'Lato-Semibold'; src: url("../fonts/Lato-Semibold.eot"); src: url("../fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Semibold.woff2") format("woff2"), url("../fonts/Lato-Semibold.woff") format("woff"), url("../fonts/Lato-Semibold.ttf") format("truetype"), url("../fonts/Lato-Semibold.svg#LatoS") format("svg"); font-weight: normal; font-style: normal; }
@@ -12,8 +13,41 @@
 @keyframes bounce { 0%, 20%, 50%, 80%, 100% { -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
   40% { -ms-transform: translateY(-5px); -webkit-transform: translateY(-5px); transform: translateY(-5px); }
   60% { -ms-transform: translateY(-5px); -webkit-transform: translateY(-5px); transform: translateY(-5px); } }
-body { margin: 0; }
+body { background-color: #f0f0f0 !important; margin: 0; }
 
+.img-responsive { display: block; max-width: 100%; height: auto; }
+
+/* Notification Styles */
+.notification-container { box-sizing: border-box; position: fixed; top: 10%; right: 0; z-index: 999999; width: 320px; padding: 0 15px; max-height: calc(100% - 30px); overflow-x: hidden; overflow-y: auto; }
+
+.notification { box-sizing: border-box; padding: 15px 15px 15px 58px; border-radius: 4px; color: #fff; background-color: #ccc; box-shadow: 0 0 10px #999; cursor: pointer; font-family: "Lato-Thin", sans-serif; font-size: 1em; line-height: 1.2em; position: relative; opacity: 0.9; margin-top: 15px; }
+.notification .title { font-family: "Lato-Semibold", sans-serif; font-size: 1.2em; line-height: 1.2em; margin: 0 0 5px 0; }
+.notification:hover, .notification:focus { opacity: 1; }
+
+.notification-enter { visibility: hidden; -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); }
+
+.notification-enter.notification-enter-active { visibility: visible; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: all 0.3s; transition: all 0.3s; }
+
+.notification-leave { visibility: visible; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+.notification-leave.notification-leave-active { visibility: hidden; -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); -webkit-transition: all 0.3s; transition: all 0.3s; }
+
+.notification:before { position: absolute; top: 50%; left: 15px; margin-top: -14px; display: block; font-family: "Notification"; width: 28px; height: 28px; font-size: 28px; text-align: center; line-height: 28px; }
+
+.notification-info { background-color: #2f96b4; }
+.notification-info:before { content: "\f05a"; }
+
+.notification-success { background-color: #51a351; }
+.notification-success:before { content: "\f058"; }
+
+.notification-warning { background-color: #f89406; }
+.notification-warning:before { content: "\f06a"; }
+
+.notification-error { background-color: #bd362f; }
+.notification-error:before { content: "\f057"; }
+
+/* Notification Styles */
+/* Components */
 .wrapper { background-color: #f0f0f0; color: #666; position: relative; }
 .wrapper .wrapper-header { background-color: #666; color: #fff; font-family: "Lato-Bold", sans-serif; position: relative; }
 .wrapper .wrapper-header .title { display: inline-block; font-size: 30px; margin-top: 30px; padding-bottom: 5px; }
@@ -22,4 +56,10 @@ body { margin: 0; }
 .wrapper .wrapper-header .login .loginForm .loginInput label { margin-bottom: 5px; }
 .wrapper .wrapper-header .login .loginForm .loginInput input { padding: 5px; font-size: 12px; font-family: "Lato-Thin", sans-serif; border-radius: 2px; }
 .wrapper .wrapper-header .login .loginForm .loginSubmit { padding: 5px; font-size: 12px; font-family: "Lato-Bold", sans-serif; border-radius: 3px; position: absolute; bottom: 17px; border-radius: 2px; color: #fff; background-color: #666; border: 1px solid #fff; }
-.wrapper .wrapper-body { padding: 25px 0; }
+.wrapper .wrapper-body { padding: 40px 0; }
+.wrapper .wrapper-body .image { position: relative; }
+.wrapper .wrapper-body .image .logo { width: 70%; left: 10%; top: 25%; position: absolute; }
+.wrapper .wrapper-body .register .registerTitle { margin-bottom: 30px; font-family: "Lato-Semibold", sans-serif; letter-spacing: 0.5px; }
+.wrapper .wrapper-body .register .registerForm { font-size: 16px; font-family: "Lato-Thin", sans-serif; }
+.wrapper .wrapper-body .register .registerForm input { padding: 10px; font-size: 15px; font-family: "Lato-Thin", sans-serif; border-radius: 4px; }
+.wrapper .wrapper-body .register .registerSubmit { margin-top: 20px; font-family: "Lato-Semibold", sans-serif; padding: 10px 25px; letter-spacing: 0.5px; border-radius: 2px; }

@@ -3,9 +3,122 @@
 @import "mixin";
 
 body{
+	background-color: $lightGray !important;
 	margin: 0;
 }
 
+.img-responsive{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+/* Notification Styles */
+.notification-container {
+  box-sizing: border-box;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  z-index: 999999;
+  width: 320px;
+  padding: 0 15px;
+  max-height: calc(100% - 30px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.notification {
+  box-sizing: border-box;
+  padding: 15px 15px 15px 58px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #ccc;
+  box-shadow: 0 0 10px #999;
+  cursor: pointer;
+  font-family: $font-LatoT;
+  font-size: 1em;
+  line-height: 1.2em;
+  position: relative;
+  opacity: 0.9;
+  margin-top: 15px;
+  .title {
+  	font-family: $font-LatoS;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin: 0 0 5px 0;
+  }
+  &:hover, &:focus {
+    opacity: 1;
+  }
+}
+
+.notification-enter {
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0);
+}
+
+.notification-enter.notification-enter-active {
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+}
+
+.notification-leave {
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
+
+.notification-leave.notification-leave-active {
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0);
+  transition: all 0.3s;
+}
+
+.notification {
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    margin-top: -14px;
+    display: block;
+    font-family: $font-Not;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 28px;
+  }
+}
+
+.notification-info {
+  background-color: #2f96b4;
+  &:before {
+    content: "\f05a";
+  }
+}
+
+.notification-success {
+  background-color: #51a351;
+  &:before {
+    content: "\f058";
+  }
+}
+
+.notification-warning {
+  background-color: #f89406;
+  &:before {
+    content: "\f06a";
+  }
+}
+
+.notification-error {
+  background-color: #bd362f;
+  &:before {
+    content: "\f057";
+  }
+}
+/* Notification Styles */
+
+/* Components */
 .wrapper{
 	background-color: $lightGray;
 	color: $grayUN;
@@ -63,6 +176,39 @@ body{
 		}
 	}
 	.wrapper-body{
-		padding: 25px 0;
+		padding: 40px 0;
+		.image{
+			position: relative;
+			.logo{
+				width: 70%;
+				left: 10%;
+				top: 25%;
+				position: absolute;
+			}
+		}
+		.register{
+			.registerTitle{
+				margin-bottom: 30px;
+				font-family: $font-LatoS;
+				letter-spacing: 0.5px;
+			}
+			.registerForm{
+				font-size: 16px;
+				font-family: $font-LatoT;
+				input{
+					padding: 10px;
+					font-size: 15px;
+					font-family: $font-LatoT;
+					border-radius: 4px;
+				}
+			}
+			.registerSubmit{
+				margin-top: 20px;
+				font-family: $font-LatoS;
+				padding: 10px 25px;
+				letter-spacing: 0.5px;
+				border-radius: 2px;
+			}
+		}
 	}
 }

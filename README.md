@@ -12,7 +12,7 @@ This project is the Presentation Layer of Muro Application, this is being develo
 
 ## Run App
 
-- https://github.com/gcgarciab/ArqSoft-Muro.git
+- git clone https://github.com/gcgarciab/ArqSoft-Muro.git
 - npm install
 - npm start
 
